@@ -15,3 +15,6 @@ service mariadb start
 read -p "Please input MariaDB root password: " MYSQLROOTPASSWORD
 mysqladmin -u root password $MYSQLROOTPASSWORD
 
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --reload
+
